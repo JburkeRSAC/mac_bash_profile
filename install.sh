@@ -69,8 +69,16 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 mkdir -p /Users/$USER/Library/Python/2.7/lib/python/site-packages
 echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> /Users/$USER/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 brew doctor -v
-brew install nmap tmux vim git
+brew install nmap tmux vim git wget
 brew update && brew upgrade
 echo "colo slate
 syntax on" > ~/.vimrc
+#colorize time!
+git clone https://gist.github.com/9e626ce370e1da6c6373.git
+git clone https://gist.github.com/9e626ce370e1da6c6373.git
+cd 9e626ce370e1da6c6373
+cat set_colors.bash >> ~/.bash_profile
+cp .colors.csv ~/ && cd ..
+rm -rf 9e626ce370e1da6c6373
+printf "${GREEN}NOW RUN via \$sh continue.sh\n"
 pkill afplay
